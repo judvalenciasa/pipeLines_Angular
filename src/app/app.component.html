@@ -10,6 +10,35 @@
 
 <p> {{texto | uppercase}} </p>
 
+<ul>
+    <li *ngFor="let animal of animales | slice:minimo:maximo">
+        {{animal | slice:1:3}}
+        {{animal}}
+    </li>
+</ul>
+
+<input type="range" min="0" [max]="animales.length-1" step="1" [(ngModel)]="minimo"> {{minimo}}
+<input type="range" min="0" [max]="animales.length-1" step="1" [(ngModel)]="maximo"> {{maximo}}
+
+
+<p>Mensaje: {{ promesa | async}}</p>
+
+
+<ul>
+    <li *ngFor="let post of promPromesa | async">
+        {{post.title}}
+    </li>
+</ul>
+
+<p> {{texto | reverso}} </p>
+
+<p> {{texto | capitallize}} </p>
+
+<ul>
+    <li *ngFor="let num of 5 | numToArr">
+        {{num}}
+    </li>
+</ul>
 
 
 <router-outlet></router-outlet>
