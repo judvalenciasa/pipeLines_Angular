@@ -1,0 +1,15 @@
+<p> Precio: {{precio | currency:'EUR':'symbol':'1.1-1' }} </p>
+
+<p>Numero: {{numero | number:'1.2-2'}} </p>
+
+<p>Fecha: {{fechaActual | date:'dd-MM-yyy HH:mm.ss'}} </p>
+
+<p>Num Aleatorio: {{ numAleatorio | percent:'1.1-2' }} </p>
+
+<p> {{estudiante | json}} </p>
+
+<p> {{texto | uppercase}} </p>
+
+
+
+<router-outlet></router-outlet>
